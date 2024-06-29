@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es-col">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+        </header>
+        <main class="contenedor_principal">
+            <div>
+                <img src="./imgs/Logo.png" alt="Logo Alura LATAM">
+            </div>
+            <div class="contenedor_principal_encriptador">
+                <textarea name="texto" id="texto" placeholder="Ingrese su texto aqui." autocomplete="off" class="contenedor_principal_encriptador_entrada"></textarea>
+                <div>
+                    <p id="condicion" class="contenedor_principal_encriptador_informacion"><i class="fa-solid fa-circle-info"></i> Solo letras minúsculas y sin acentos.</p>
+                    <button class="contenedor_principal_encriptador_orden btn_accion" onclick="validarCondiciones('encriptar')"><i class="fa-solid fa-lock"></i> Encriptar</button>
+                    <button class="contenedor_principal_encriptador_orden btn_accion" onclick="validarCondiciones('desencriptar')"><i class="fa-solid fa-lock-open"></i> Desencriptar</button>
+                </div>
+            </div>
+            <div class="contenedor_principal_mensaje">
+                <div class="contenedor_principal_mensaje_presentacion" id="presente">
+                    <img class="contenedor_principal_mensaje_presentacion_imagen" src="./imgs/Muñeco.png" alt="Imagen de un muneco analizando un diamante">
+                    <h2 class="contenedor_principal_mensaje_presentacion_subtitulo">Ningún mensaje fue encontrado.</h2>
+                    <p class="contenedor_principal_mensaje_presentacion_texto">Ingrese el texto que desea encriptar o desencriptar.</p>
+                </div>
+                <div class="contenedor_principal_mensaje_resuelto oculto" id="oculto">
+                    <p class="contenedor_principal_mensaje_resuelto_texto" id="mensaje"></p>
+                    <button class="contenedor_principal_mensaje_resuelto_orden btn_accion" onclick="copiarAlPortapapeles()"><i class="fa-solid fa-copy"></i> Copiar</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Desarrollado por Gabriel Sanchez Cristancho <i class="fa-regular fa-copyright"></i></p>
+        </footer>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
